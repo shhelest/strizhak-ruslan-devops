@@ -5,6 +5,7 @@ LABEL student_id="37187"
 LABEL course="DevOps"
 
 WORKDIR /app
+EXPOSE 8080
 
 COPY Strizhak_Ruslan_info.txt .
 COPY config/ ./config/
