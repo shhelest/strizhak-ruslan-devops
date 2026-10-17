@@ -1,17 +1,5 @@
 Name: Ruslan
 Surname: Strizhak
-Group: SE-2310
-Student ID: 123456
+Group: IT2-2314
+Student ID: 37187
 Course: DevOps
-EO
-cat <<EOF > logs/application.log
-INFO Application started
-INFO User logged in
-WARNING Configuration file missing
-INFO Database connected
-ERROR Database connection failed
-INFO Application restarted
-WARNING Memory usage is high
-INFO Request received
-ERROR Request failed
-INFO Application stopped

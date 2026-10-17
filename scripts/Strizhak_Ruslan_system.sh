@@ -1,28 +1,37 @@
 #!/bin/bash
 
-echo "==============================="
+echo "=============================="
 echo "Student Information"
-echo "==============================="
+echo "=============================="
+
 echo "Name: Ruslan"
 echo "Surname: Strizhak"
-echo "Group: SE-2310"
-echo "Student ID: 123456"
-echo "==============================="
+echo "Group: IT2-2314"
+echo "Student ID: 37187"
+
+echo ""
+echo "=============================="
 echo "System Information"
-echo "==============================="
+echo "=============================="
+
 echo "Username: $(whoami)"
 echo "Hostname: $(hostname)"
 echo "Current Date: $(date)"
-echo "Operating System: $(uname -o)"
-echo "Disk Usage:"
-df -h / | awk 'NR==2 {print "  Total: " $2 ", Used: " $3 ", Free: " $4 ", Usage: " $5}'
-echo "Memory Usage:"
-free -h | awk '/Mem:/ {print "  Total: " $2 ", Used: " $3 ", Free: " $4}'
-echo "==============================="
+echo "Operating System: $(uname -s)"
 
-INFO_FILE="../Strizhak_Ruslan_info.txt"
-if [ -f "$INFO_FILE" ]; then
+echo "Disk Usage:"
+df -h /
+
+echo "Memory Usage:"
+free -h
+
+echo ""
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+
+if [ -f "$PROJECT_DIR/Strizhak_Ruslan_info.txt" ]; then
     echo "Student information file exists."
 else
     echo "Student information file does not exist."
 fi
+
